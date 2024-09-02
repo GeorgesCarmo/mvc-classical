@@ -1,22 +1,30 @@
 Projeto prático: API de Produtos:
 
-    ☐ Inicialização do projeto e instalação do typescript @done
+    ✔ Inicialização do projeto e instalação do typescript @done
         npm init -y
         npm install typescript ts-node @types/node --save-dev
         npx tsc --init
 
-    ☐ Configuração do tsconfig.json e do package.json @done
+    ✔ Configuração do tsconfig.json e do package.json @done
         No arquivo tsconfig.json => descomentar rootDir e inserir o valor "./src"
 
-    ☐ Criação da entidade @done
-    ☐ Criação do repositório
-        ☐ Criação do contrato @done
-        ☐ Instalação e configuração do Prisma + sqlite
-        ☐ Criação do repositório de produtos
-    ☐ Criação do serviço @done
-        ☐ Criação do contrato @done
-        ☐ Implementação concreta @done
+    ✔ Criação da entidade @done
+    ✔ Criação do repositório @done
+        ✔ Criação do contrato @done
+        ✔ Instalação e configuração do Prisma + sqlite @done
+        npm install prisma --save-dev
+        npx prisma init
+        Após a criação do model - npx prisma db push
+        Para verificar a criação do banco - npx prisma studio
+        npm install @prisma/client
+
+        ✔ Criação do repositório de produtos @done
+    ✔ Criação do serviço @done
+        ✔ Criação do contrato @done
+        ✔ Implementação concreta @done
     ☐ Criação do controller
+        npm install express
+        npm install @types/express -D
     ☐ Criação da API
         ☐ Criação do contrato
         ☐ Implementação concreta

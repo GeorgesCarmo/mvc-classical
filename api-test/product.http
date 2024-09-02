@@ -1,0 +1,35 @@
+###
+GET http://localhost:8000/products
+
+###
+POST http://localhost:8000/products/create
+Content-Type: application/json
+
+{
+    "name": "Produto 1",
+    "price": 10.1
+}
+
+###
+POST http://localhost:8000/products/create
+Content-Type: application/json
+
+{
+    "name": "Produto 2",
+    "price": 20.2
+}
+
+###
+POST http://localhost:8000/products/275d44ae-0f70-4f14-af0e-527d9b2bf967/buy
+Content-Type: application/json
+
+{
+    "amount": 100
+}
+
+POST http://localhost:8000/products/{id}/sell
+Content-Type: application/json
+
+{
+    "amount": 25
+}
