@@ -7,14 +7,15 @@ Projeto prático: API de Produtos:
 
     ☐ Configuração do tsconfig.json e do package.json @done
         No arquivo tsconfig.json => descomentar rootDir e inserir o valor "./src"
+
     ☐ Criação da entidade @done
     ☐ Criação do repositório
         ☐ Criação do contrato @done
         ☐ Instalação e configuração do Prisma + sqlite
         ☐ Criação do repositório de produtos
-    ☐ Criação do serviço
-        ☐ Criação do contrato
-        ☐ Implementação concreta
+    ☐ Criação do serviço @done
+        ☐ Criação do contrato @done
+        ☐ Implementação concreta @done
     ☐ Criação do controller
     ☐ Criação da API
         ☐ Criação do contrato
