@@ -4,6 +4,7 @@ GET http://localhost:8000/products
 ###
 POST http://localhost:8000/products/create
 Content-Type: application/json
+
 {
     "name": "Produto 1",
     "price": 10.1
@@ -12,6 +13,7 @@ Content-Type: application/json
 ###
 POST http://localhost:8000/products/create
 Content-Type: application/json
+
 {
     "name": "Produto 2",
     "price": 20.2
@@ -20,13 +22,15 @@ Content-Type: application/json
 ###
 POST http://localhost:8000/products/d7edfc6e-5518-4bc9-9067-561e1c8b6bcb/buy
 Content-Type: application/json
+
 {
-    "amount": 100
+    "amount":100
 }
 
 ###
 POST http://localhost:8000/products/d7edfc6e-5518-4bc9-9067-561e1c8b6bcb/sell
 Content-Type: application/json
+
 {
-    "amount": 25
+    "amount":25
 }
