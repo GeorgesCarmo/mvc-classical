@@ -2,11 +2,11 @@ import { PrismaClient } from "@prisma/client";
 import { Product } from "../../../entities/Product";
 import { ProductRepository } from "../productRepository";
 
-export class ProductRepositoryPrisma implements ProductRepository{
+export class ProductRepositoryPrisma implements ProductRepository {
 
-    private constructor(readonly prismaRepository: PrismaClient){}
+    private constructor(readonly prismaRepository: PrismaClient) { }
 
-    public static build(prisma: PrismaClient){
+    public static build(prisma: PrismaClient) {
         return new ProductRepositoryPrisma(prisma);
     }
 
@@ -27,8 +27,8 @@ export class ProductRepositoryPrisma implements ProductRepository{
     public async list(): Promise<Product[]> {
         const aProducts = await this.prismaRepository.product.findMany();
 
-        const products: Product[] = aProducts.map((p)=>{
-            const {id, name, price, quantity} = p;
+        const products: Product[] = aProducts.map((p) => {
+            const { id, name, price, quantity } = p;
             return Product.with(id, name, price, quantity);
         });
 
@@ -52,18 +52,18 @@ export class ProductRepositoryPrisma implements ProductRepository{
 
     public async find(id: string): Promise<Product | null> {
         const aProduct = await this.prismaRepository.product.findUnique({
-            where: {id},
+            where: { id },
         });
-        
-        if(!aProduct){
+
+        if (!aProduct) {
             return null;
         }
 
-        const {name, price, quantity} = aProduct;
+        const { name, price, quantity } = aProduct;
 
         const product = Product.with(id, name, price, quantity);
 
         return product;
     }
-    
+
 }

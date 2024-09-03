@@ -22,7 +22,7 @@ Projeto prático: API de Produtos:
     ✔ Criação do serviço @done
         ✔ Criação do contrato @done
         ✔ Implementação concreta @done
-    ☐ Criação do controller
+    ✔ Criação do controller @done
         npm install express
         npm install @types/express -D
     ☐ Criação da API

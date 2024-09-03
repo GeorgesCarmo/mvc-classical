@@ -8,11 +8,6 @@ export type BuyOutputDto = {
     balance: number;
 };
 
-export type CreateOutputDto = {
-    id: string,
-    balance: number
-};
-
 export type ListOutputDto = {
     products: {
         id: string;
@@ -20,6 +15,11 @@ export type ListOutputDto = {
         price: number;
         balance: number;
     }[];
+};
+
+export type CreateOutputDto = {
+    id: string,
+    balance: number
 };
 
 export interface ProductService {

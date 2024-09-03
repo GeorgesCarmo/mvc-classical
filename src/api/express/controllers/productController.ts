@@ -1,18 +1,18 @@
 import { Request, Response } from "express";
 import { ProductRepositoryPrisma } from "../../../repositories/product/prisma/productRepositoryPrisma";
-import { ProductServiceImplementation } from "../../../services/implementation/productServiceImplementation";
+import { ProductServiceImplementation } from "../../../services/product/implementation/productServiceImplementation";
 import { prisma } from "../../../util/primaUtil";
 
 export class ProductController {
 
-    private constructor(){}
+    private constructor() { }
 
-    public static build(){
+    public static build() {
         return new ProductController();
     }
 
-    public async create(request: Request, response:Response){
-        const {name, price} = request.body;
+    public async create(request: Request, response: Response) {
+        const { name, price } = request.body;
 
         const aRepository = ProductRepositoryPrisma.build(prisma);
         const aService = ProductServiceImplementation.build(aRepository);
@@ -27,9 +27,9 @@ export class ProductController {
         }
 
         response.status(201).json(data).send();
-    } 
+    }
 
-    public async list(request: Request, response:Response){
+    public async list(request: Request, response: Response) {
         const aRepository = ProductRepositoryPrisma.build(prisma);
         const aService = ProductServiceImplementation.build(aRepository);
 
@@ -42,7 +42,7 @@ export class ProductController {
         response.status(200).json(data).send();
     }
 
-    public async buy(request: Request, response:Response){
+    public async buy(request: Request, response: Response) {
         const { id } = request.params;
         const { amount } = request.body;
 
@@ -59,7 +59,7 @@ export class ProductController {
         response.status(200).json(data).send();
     }
 
-    public async sell(request: Request, response:Response){
+    public async sell(request: Request, response: Response) {
         const { id } = request.params;
         const { amount } = request.body;
 
